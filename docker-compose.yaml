@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    crud-app:
+        build: .
+        ports: 
+            - "8080:80"
+        volumes:
+            - ./:/usr/share/nginx
+        networks: 
+            - app-network
+    postgres-app:
+        image: postgres
+        restart: always
+        ports:
+            - "5432:5432"
+        volumes:
+            - .docker/dbdata:/var/lib/postgres
+        environment:
+            POSTGRES_PASSWORD: crud
+        networks:
+            - app-network
+
+networks: 
+    app-network:
+        driver: bridge

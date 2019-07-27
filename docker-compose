@@ -1,0 +1,36 @@
+version: '3'
+
+volumes:
+    logs:
+        driver: local
+
+services:
+    slim:
+        build: .
+        image: php:7-alpine
+        working_dir: /usr/share/nginx
+        command: php -S 0.0.0.0:8080 -t public
+        environment:
+            docker: "true"
+        ports:
+            - 8080:80
+        volumes:
+            - ./:/usr/share/nginx
+            - logs:/usr/share/nginx/logs
+        networks:
+            - app-network
+    mysql-app:
+        image: mysql:5.7.22
+        ports:
+            - "3306:3306"
+        volumes:
+            - .docker/dbdata:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: crud
+            MYSQL_ROOT_PASSWORD: crud
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge

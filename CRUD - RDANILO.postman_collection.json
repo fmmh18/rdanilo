@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "7d8d75fc-9cbb-4f74-b8be-83ae9c26c6a8",
+		"name": "CRUD - RDANILO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "nome",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "senha",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "datacriacao",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "codautorizacao",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "statususuario",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "codpessoa",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "tempoexperiacaosenha",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/editar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "nome",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "senha",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "datacriacao",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "tempoexperiacaosenha",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "codautorizacao",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "statususuario",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "codpessoa",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/adicionar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adicionar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/deletar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deletar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
